@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="view-section active">
+    <header class="view-header">
+        <h1>Campus FAQ Assistant</h1>
+        <p>Ask anything about university rules, admissions, or campus life.</p>
+    </header>
+    
+    <div class="chat-container">
+        <div id="chat-box" class="chat-box">
+            <div class="message ai-message">
+                <div class="bubble">Hello! I'm the Campus AI Assistant. How can I help you today?</div>
+            </div>
+        </div>
+        
+        <div class="chat-input-area">
+            <input type="text" id="chat-input" placeholder="Type your question here..." autocomplete="off" />
+            <button id="send-btn" class="primary-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+        </div>
+    </div>
+</section>
+{% endblock %}

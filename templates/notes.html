@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="view-section active">
+    <header class="view-header">
+        <h1>Notes Analyzer</h1>
+        <p>Upload a photo of messy handwritten notes or a PDF and turn it into clean Markdown.</p>
+    </header>
+
+    <div class="digitize-container">
+        <!-- Upload Area -->
+        <div class="upload-area" id="upload-area">
+            <input type="file" id="file-input" accept="image/*,.pdf" hidden />
+            <div class="upload-prompt">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                <p>Drag and drop an image or PDF, or click to browse</p>
+                <span class="file-name" id="file-name">No file selected</span>
+            </div>
+            <button id="process-btn" class="primary-btn" disabled>Digitize Notes</button>
+        </div>
+        
+        <!-- Result Area -->
+        <div class="result-area hidden" id="result-area">
+            <div class="result-header">
+                <h3>Structured Markdown Output</h3>
+                <button id="copy-btn" class="secondary-btn">Copy to Clipboard</button>
+            </div>
+            <div id="markdown-output" class="markdown-body">
+                <!-- Processed content replaces this -->
+            </div>
+            <button id="reset-btn" class="secondary-btn" style="margin-top: 15px;">Upload Another Image</button>
+        </div>
+
+        <!-- Loader -->
+        <div id="loader" class="loader-container hidden">
+            <div class="spinner"></div>
+            <p>Our AI is analyzing your handwritten notes...</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

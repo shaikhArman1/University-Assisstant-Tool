@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="hero-section">
+    <div class="hero-content">
+        <h1>Welcome to Campus AI</h1>
+        <p>Your ultimate university companion for FAQs and Notes Analyzer.</p>
+        <div class="hero-buttons">
+            <a href="{{ url_for('chat_page') }}" class="primary-btn">Try RAG Chatbot</a>
+            <a href="{{ url_for('notes_page') }}" class="secondary-btn">Try Notes Analyzer</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
