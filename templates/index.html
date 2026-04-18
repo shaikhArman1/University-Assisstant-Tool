@@ -3,11 +3,12 @@
 {% block content %}
 <section class="hero-section">
     <div class="hero-content">
-        <h1>Welcome to Campus AI</h1>
-        <p>Your ultimate university companion for FAQs and Notes Analyzer.</p>
+        <span class="hero-label">[ university assistant ]</span>
+        <h1>Your campus,<br>understood.</h1>
+        <p class="hero-subtitle">AI-powered FAQ chatbot trained on your university's knowledge base. Upload messy handwritten notes and get clean, structured markdown back.</p>
         <div class="hero-buttons">
-            <a href="{{ url_for('chat_page') }}" class="primary-btn">Try RAG Chatbot</a>
-            <a href="{{ url_for('notes_page') }}" class="secondary-btn">Try Notes Analyzer</a>
+            <a href="{{ url_for('chat_page') }}" class="btn-outline">Start chatting</a>
+            <a href="{{ url_for('notes_page') }}" class="btn-text">Analyze notes →</a>
         </div>
     </div>
 </section>

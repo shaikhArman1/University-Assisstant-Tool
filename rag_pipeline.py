@@ -1,4 +1,5 @@
 import os
+import json
 from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
@@ -105,36 +106,28 @@ FINAL ANSWER:
         print(f"❌ Error initializing RAG: {e}")
 
 
-def ask_question(question: str) -> dict:
-    """Answers a question using RAG and returns answer + sources."""
+def ask_question_stream(question: str):
+    """Answers a question using RAG and yields it as Server-Sent Events (SSE)."""
 
     if not qa_chain:
-        return {
-            "answer": "The RAG pipeline is not initialized.",
-            "sources": []
-        }
+        yield f"data: {json.dumps({'error': 'The RAG pipeline is not initialized.'})}\n\n"
+        return
 
     try:
-        result = qa_chain.invoke({"input": question})
+        context_docs = []
+        for chunk in qa_chain.stream({"input": question}):
+            if "answer" in chunk:
+                yield f"data: {json.dumps({'text': chunk['answer']})}\n\n"
+            if "context" in chunk:
+                context_docs = chunk["context"]
 
-        answer = result.get("answer", "No answer found.")
-        answer = answer.strip().replace("\n\n", "\n")
-
-        # Clean sources
-        context_docs = result.get("context", [])
         sources = list(set([
             doc.page_content[:120].strip().split("\n")[0]
             for doc in context_docs
         ]))
-
-        return {
-            "answer": answer,
-            "sources": sources
-        }
+        if sources:
+            yield f"data: {json.dumps({'sources': sources})}\n\n"
 
     except Exception as e:
         print(f"RAG Error: {e}")
-        return {
-            "answer": "Sorry, I encountered an error processing your query.",
-            "sources": []
-        }
+        yield f"data: {json.dumps({'error': 'Sorry, I encountered an error processing your query.'})}\n\n"

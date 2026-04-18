@@ -3,22 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campus AI Assistant</title>
+    <title>Campus AI</title>
+    <meta name="description" content="Your university companion — AI-powered FAQ chatbot and handwritten notes analyzer.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     {% block head %}{% endblock %}
 </head>
 <body>
     <nav class="navbar">
-        <div class="logo">
-            <a href="{{ url_for('index') }}" style="text-decoration: none;"><h2>Campus AI</h2></a>
-        </div>
+        <a href="{{ url_for('index') }}" class="logo">campus.ai</a>
         <div class="nav-links">
-            <a href="{{ url_for('chat_page') }}" class="nav-btn {% if request.endpoint == 'chat_page' %}active{% endif %}">RAG Chatbot</a>
-            <a href="{{ url_for('notes_page') }}" class="nav-btn {% if request.endpoint == 'notes_page' %}active{% endif %}">Notes Analyzer</a>
+            <a href="{{ url_for('chat_page') }}" class="nav-btn {% if request.endpoint == 'chat_page' %}active{% endif %}">Chatbot</a>
+            <a href="{{ url_for('notes_page') }}" class="nav-btn {% if request.endpoint == 'notes_page' %}active{% endif %}">Notes</a>
         </div>
     </nav>
     <main class="main-content">
@@ -27,4 +26,3 @@
     <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 </body>
 </html>
-

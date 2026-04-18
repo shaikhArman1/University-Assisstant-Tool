@@ -6,7 +6,7 @@ from werkzeug.utils import secure_filename
 from PIL import Image
 
 # Initialize the RAG pipeline
-from rag_pipeline import init_rag, ask_question
+from rag_pipeline import init_rag, ask_question_stream
 
 load_dotenv()
 
@@ -46,6 +46,8 @@ def notes_page():
     return render_template('notes.html')
 
 
+from flask import Response
+
 @app.route('/chat', methods=['POST'])
 def chat():
     """RAG Chatbot"""
@@ -54,12 +56,7 @@ def chat():
         return jsonify({'error': 'No message provided'}), 400
 
     user_message = data['message']
-    result = ask_question(user_message)
-
-    return jsonify({
-        'answer': result.get('answer', ''),
-        'sources': result.get('sources', [])
-    })
+    return Response(ask_question_stream(user_message), mimetype='text/event-stream')
 
 
 @app.route('/upload', methods=['POST'])
@@ -83,7 +80,7 @@ def digitize():
 
     try:
         # Model
-        model = genai.GenerativeModel('gemini-1.5-flash')  # faster
+        model = genai.GenerativeModel('gemini-2.5-flash')  # faster
 
         prompt = """
 You are an expert AI that converts handwritten notes into clean, structured study material.

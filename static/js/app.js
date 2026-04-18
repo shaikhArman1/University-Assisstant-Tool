@@ -54,17 +54,57 @@ document.addEventListener('DOMContentLoaded', () => {
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ message: msg })
                 });
-                const data = await res.json();
-                
                 chatBox.removeChild(tempMsgDiv);
-                if (data.answer) {
-                    const hasSources = data.sources && data.sources.length > 0;
-                    addMessage(data.answer, 'ai', hasSources);
-                } else {
-                    addMessage("I'm sorry, I couldn't understand the server response.", 'ai');
+                
+                const msgDiv = document.createElement('div');
+                msgDiv.className = 'message ai-message';
+                const bubble = document.createElement('div');
+                bubble.className = 'bubble';
+                msgDiv.appendChild(bubble);
+                chatBox.appendChild(msgDiv);
+                
+                const reader = res.body.getReader();
+                const decoder = new TextDecoder('utf-8');
+                let aiText = '';
+
+                while (true) {
+                    const { value, done } = await reader.read();
+                    if (done) break;
+                    
+                    const chunkText = decoder.decode(value, { stream: true });
+                    const lines = chunkText.split('\n');
+                    
+                    for (const line of lines) {
+                        if (line.startsWith('data: ')) {
+                            const dataStr = line.replace('data: ', '').trim();
+                            if (!dataStr) continue;
+                            
+                            try {
+                                const data = JSON.parse(dataStr);
+                                if (data.error) {
+                                    aiText += "\n\n**Error**: " + data.error;
+                                    bubble.innerHTML = marked.parse(aiText);
+                                } else if (data.text) {
+                                    aiText += data.text;
+                                    bubble.innerHTML = marked.parse(aiText);
+                                } else if (data.sources && data.sources.length > 0) {
+                                    const sourceLabel = document.createElement('span');
+                                    sourceLabel.className = 'source-label';
+                                    sourceLabel.textContent = 'source: University FAQs document';
+                                    msgDiv.appendChild(sourceLabel);
+                                }
+                            } catch (e) {
+                                console.error("Error parsing stream data:", e);
+                            }
+                            
+                            chatBox.scrollTop = chatBox.scrollHeight;
+                        }
+                    }
                 }
             } catch (error) {
-                chatBox.removeChild(tempMsgDiv);
+                if (chatBox.contains(tempMsgDiv)) {
+                    chatBox.removeChild(tempMsgDiv);
+                }
                 addMessage("An error occurred. Please make sure the backend is running.", 'ai');
             } finally {
                 chatInput.disabled = false;
@@ -177,11 +217,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         copyBtn.addEventListener('click', () => {
-            // Find raw markdown if available, else copy text content
             const textToCopy = markdownOutput.innerText;
             navigator.clipboard.writeText(textToCopy).then(() => {
                 const originalText = copyBtn.textContent;
-                copyBtn.textContent = 'Copied!';
+                copyBtn.textContent = '✓ copied';
                 setTimeout(() => {
                     copyBtn.textContent = originalText;
                 }, 2000);
