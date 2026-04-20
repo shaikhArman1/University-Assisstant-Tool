@@ -1,34 +1,296 @@
 # University of Technology FAQ
 
 ## General Information
-- The university campus is open from 6:00 AM to 11:00 PM, Monday through Sunday.
-- For emergency, contact Campus Security at 555-0199.
-- The academic year is divided into two main semesters: Fall (starts in September) and Spring (starts in February).
+- The University of Technology (U-Tech) is a private autonomous engineering and management institute established in 2005.
+- Accredited with NAAC A+ grade and NBA accreditation for core engineering programs.
+- Approved by AICTE and recognized under Section 2(f) and 12(B) of UGC Act.
+- Affiliated with State Technical University for degree validation.
+- Ranked in top 100 engineering colleges in India (NIRF category).
+- Campus spread over 120 acres with academic blocks, hostels, research centers, and recreational areas.
+- Located in Tech Valley, Sector 12, New City, easily accessible via metro and highways.
+- Campus timings: 6:00 AM to 11:00 PM (academic access), hostels operate 24/7.
+- Administrative office timings: 9:00 AM to 5:00 PM (Monday–Friday).
+- Official Website: www.utech.edu
+- Email: info@utech.edu
+- Phone: +91-9876543210
 
-## Admissions
-- The deadline for Fall undergraduate admissions is January 15th.
-- International students require proof of English proficiency (TOEFL or IELTS).
-- Application fees are $50 for domestic applicants and $75 for international applicants.
+## Governance & Administration
+- Governed by Board of Trustees and Academic Council.
+- Departments headed by experienced Professors and Deans.
+- Separate administrative offices for:
+  - Admissions
+  - Academics
+  - Examination
+  - Student Welfare
+- Decision-making includes faculty committees and student representatives.
 
-## Tuition and Financial Aid
-- In-state undergraduate tuition is approximately $10,000 per academic year.
-- Out-of-state undergraduate tuition is $28,000 per academic year.
-- To apply for financial aid, students must submit the FAFSA by March 1st.
-- Scholarships are awarded based on both merit and financial need. Check the portal for specific scholarships.
+## Admissions Process
+- Admission channels:
+  - National exams: JEE Main, GATE
+  - State exams: WBJEE
+  - Management quota (limited seats)
+- Application process:
+  - Register on official portal
+  - Fill academic details
+  - Upload documents
+  - Pay application fee
+- Documents required:
+  - Class 10 certificate (DOB proof)
+  - Class 12 marksheet
+  - Entrance exam scorecard
+  - Transfer certificate
+  - Migration certificate (if applicable)
+  - Identity proof (Aadhar/Passport)
+  - Passport-size photographs
+- Selection criteria:
+  - Entrance exam rank
+  - Academic performance
+  - Counseling rounds
+- Admission timeline:
+  - Applications open: April
+  - Counseling: June–July
+  - Session starts: August
 
-## Academics & Departments
-- The Computer Science department is located in the Alan Turing Building.
-- The minimum GPA required to remain in good academic standing is 2.0.
-- A full-time undergraduate course load is considered 12 to 18 credits per semester.
-- Dropping a course without a "W" grade is possible within the first two weeks of classes.
+## Academic Structure
+- Two semesters per academic year:
+  - Odd Semester (Aug–Dec)
+  - Even Semester (Jan–May)
+- Each semester includes:
+  - Mid-Semester Exams (30%)
+  - End-Semester Exams (50%)
+  - Assignments/Projects (20%)
+- Credit system:
+  - 1 credit = 1 hour lecture per week
+- Typical load:
+  - 18–24 credits per semester
+- Attendance:
+  - Minimum 75% mandatory
+- Grading:
+  - CGPA scale (0–10)
+  - Grade mapping:
+    - 9–10 → O (Outstanding)
+    - 8–9 → A
+    - 7–8 → B
+    - Below 5 → Fail
 
-## Student Life
-- Housing applications open on April 1st for the upcoming Fall semester.
-- Meal plans are mandatory for freshmen living on campus.
-- The Student Recreation Center offers a swimming pool, indoor track, and multiple gyms.
-- Over 100 student clubs and organizations are available.
+## Programs Offered
 
-## Technology & Resources
-- Campus-wide Wi-Fi is available via the 'UniversitySecure' network. Students must log in using their Student ID credentials.
-- IT support is available 24/7 at support@university.edu or 555-0101.
-- Libraries remain open 24 hours during final exam weeks.
+### Undergraduate Programs (B.Tech)
+- Computer Science Engineering (CSE)
+- Electronics & Communication Engineering (ECE)
+- Mechanical Engineering (ME)
+- Civil Engineering (CE)
+- Artificial Intelligence & Data Science (AI-DS)
+
+### Postgraduate Programs
+- M.Tech in AI & ML
+- M.Tech in VLSI Design
+- MBA (Finance, Marketing, Analytics)
+- MCA
+
+### Doctoral Programs
+- PhD in:
+  - Computer Science
+  - Mechanical Engineering
+  - Management Studies
+
+## Curriculum & Learning
+- Curriculum updated every 2 years with industry input.
+- Includes:
+  - Core subjects
+  - Electives
+  - Lab sessions
+  - Mini and major projects
+- Final year includes capstone project.
+- Students must complete internship for graduation.
+
+## Fees Breakdown
+- Tuition fee:
+  - B.Tech: ₹1,20,000/year
+  - M.Tech: ₹90,000/year
+  - MBA: ₹1,50,000/year
+- Additional fees:
+  - Library fee: ₹3,000/year
+  - Lab fee: ₹5,000/year
+  - Exam fee: ₹5,000/semester
+- Hostel:
+  - ₹60,000/year (including mess)
+- Payment methods:
+  - Online portal
+  - UPI / Net Banking
+  - Bank transfer
+- Late payment penalty applicable.
+
+## Scholarships & Financial Support
+- Merit scholarships:
+  - Top 5% → 100% tuition waiver
+  - Next 10% → 50% waiver
+- Need-based scholarships:
+  - Based on income certificate
+- Government schemes:
+  - SC/ST/OBC scholarships
+  - Minority scholarships
+- External scholarships supported.
+- Education loan support:
+  - Tie-ups with SBI, HDFC, ICICI
+
+## Examination System
+- Exams conducted twice per semester:
+  - Mid-semester
+  - End-semester
+- Evaluation methods:
+  - Written exams
+  - Viva
+  - Lab performance
+- Result timeline:
+  - Within 3–4 weeks
+- Backlog system:
+  - Students can reappear in failed subjects
+- Re-evaluation available.
+
+## Library & Learning Resources
+- Central library:
+  - 50,000+ physical books
+  - 10,000+ e-books
+- Digital resources:
+  - IEEE Xplore
+  - Springer
+  - Elsevier
+- Facilities:
+  - Reading halls
+  - Discussion rooms
+  - Computer terminals
+- Timings:
+  - 8 AM – 10 PM
+  - 24/7 during exams
+
+## Laboratories & Infrastructure
+- Dedicated labs for each department.
+- AI & Data Science Lab:
+  - GPUs and ML frameworks
+- Robotics Lab:
+  - Automation kits and sensors
+- Mechanical Lab:
+  - CNC machines
+- Civil Lab:
+  - Structural testing equipment
+
+## IT Infrastructure
+- Campus-wide Wi-Fi (secured login).
+- LMS portal for assignments and notes.
+- Student portal:
+  - Attendance tracking
+  - Results
+  - Fee payment
+- Email ID for every student.
+- Cloud computing resources provided.
+
+## Hostel & Facilities
+- Separate hostels:
+  - Boys Hostel (Block A, B)
+  - Girls Hostel (Block C)
+- Room types:
+  - 2 sharing
+  - 3 sharing
+  - 4 sharing
+- Facilities:
+  - Wi-Fi
+  - Laundry
+  - RO water
+  - Common rooms
+- Mess:
+  - Veg & Non-veg options
+  - Weekly menu rotation
+
+## Student Life & Activities
+- Clubs:
+  - Coding Club
+  - Robotics Club
+  - Cultural Club
+  - Drama Club
+- Events:
+  - Annual Tech Fest
+  - Cultural Fest
+- Sports:
+  - Cricket, Football, Basketball
+  - Indoor sports
+- Gym and swimming pool available.
+
+## Placements & Career Support
+- Placement cell provides:
+  - Resume building
+  - Mock interviews
+  - Aptitude training
+- Placement stats:
+  - 85% placement rate
+  - Highest: ₹20 LPA
+  - Average: ₹6 LPA
+- Recruiters:
+  - Google, Amazon, Microsoft, Infosys
+
+## Internships
+- Mandatory internship in 3rd year.
+- Opportunities:
+  - Startups
+  - MNCs
+- College assists in:
+  - Internship search
+  - Resume preparation
+
+## Research & Innovation
+- Research centers:
+  - AI Lab
+  - IoT Lab
+- Students can:
+  - Publish papers
+  - Participate in conferences
+- Funding available for projects.
+
+## Safety & Security
+- CCTV surveillance across campus.
+- Security guards 24/7.
+- ID card mandatory.
+- Anti-ragging committee active.
+
+## Medical Facilities
+- On-campus clinic.
+- Doctor available during working hours.
+- Emergency ambulance service.
+- Tie-up with nearby hospitals.
+
+## Transport
+- College buses available.
+- Covers major city routes.
+- Transport fee depends on distance.
+
+## Rules & Regulations
+- Attendance mandatory.
+- Dress code enforced.
+- No ragging policy.
+- Mobile restrictions in class.
+
+## Student Support Services
+- Counseling services available.
+- Career guidance sessions.
+- Mentorship programs.
+
+## Alumni Network
+- Active alumni association.
+- Networking events conducted.
+- Alumni mentorship programs.
+
+## International Collaboration
+- Exchange programs with foreign universities.
+- Semester abroad options.
+- Joint research programs.
+
+## Extra Academic Features
+- Workshops and seminars.
+- Hackathons.
+- Industry guest lectures.
+
+## Digital Services
+- Online portal for:
+  - Notes
+  - Assignments
+  - Results
